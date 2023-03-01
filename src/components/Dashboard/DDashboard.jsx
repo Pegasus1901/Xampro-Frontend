@@ -1,7 +1,7 @@
 import React from 'react'
 import '../CSS/ddashboard00.css'
 import Logo from '../../Images/logo.png'
-import Table from './Table/Table'
+// import Table from './Table/Table'
 
 const DDashboard = () => {
   return (
