@@ -5,44 +5,55 @@ import QuizManager from './components/Test/QuizManager.jsx';
 // import { Box} from '@mui/system';
 import { Container, Box, Typography } from '@mui/material';
 import Login from './components/login/Login.jsx';
-// import Table from './components/Dashboard/Table/Table.jsx';
 import DDashboard from './components/Dashboard/DDashboard.jsx';
+import Table from './components/Table/Table.jsx';
+import Header from './components/HomePage/Header.jsx';
+import { BrowserRouter } from 'react-router-dom';
+import Footer from './components/HomePage/Footer.jsx';
+import Home from './components/HomePage/Home.jsx';
+import Profile from './components/ProfilePage/Profile.jsx';
 
 
 const App = () => {
-  // const [dataTable, setDataTable] = useState([])
-  // // console.log(dataTable);
-  // useEffect(() => {
-  //   axios('https://jsonplaceholder.typicode.com/users')
-  //     .then(res => setDataTable(res.data))
-  //     .catch(err => console.log(err))
-  // }, [])
+  const [dataTable, setDataTable] = useState([])
+  // console.log(dataTable);
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/users')
+      .then(res => setDataTable(res.data))
+      .catch(err => console.log(err))
+  }, [])
 
-  // const column = [
-  //   { heading: 'Name', value: 'name' },
-  //   { heading: 'Email', value: 'email' },
-  //   { heading: 'Phone', value: 'phone' },
-  //   { heading: 'City', value: 'address.city' },
-  // ]
+  const column = [
+    { heading: 'Name', value: 'name' },
+    { heading: 'Email', value: 'email' },
+    { heading: 'Phone', value: 'phone' },
+    { heading: 'City', value: 'address.city' },
+  ]
   // const webRef = useRef(null);
 
   // const showImage = () => {
   //   console.log(webRef.current.getScreenshot({ width: 1920, height: 1080 }));
   // }
-  {/* <Table data={dataTable} column={column} />
-  <Webcam ref={webRef} />
-  <button onClick={() => {
-    showImage();
-  }}>Click For ScreenShot </button>
-  <h1>hii</h1> */}
+  // { 
+  // <Webcam ref={webRef} />
+  // <button onClick={() => {
+  //   showImage();
+  // }}>Click For ScreenShot </button>
+  // <h1>hii</h1> }
   return (
     <>
-      <Container maxWidth="sm">
+    {/* <BrowserRouter> */}
+      {/* <Container maxWidth="sm">
         <Box textAlign="center" mt={5}>
           <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
           <QuizManager />
         </Box>
-      </Container>
+      </Container> */}
+      {/* <Table data={dataTable} column={column} /> */}
+      {/* <DDashboard/> */}
+      {/* <Table/> */}
+      {/* </BrowserRouter> */}
+      <Profile/>
     </>
   )
 }

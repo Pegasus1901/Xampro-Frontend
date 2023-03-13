@@ -1,0 +1,2 @@
+DATABASE=mongodb+srv://golemdash:8wjMqra7q6pu45Z2@cluster0.wbjlmuy.mongodb.net/?retryWrites=true&w=majority
+JWT_KEY = kCC4XCkWW_-$scRY

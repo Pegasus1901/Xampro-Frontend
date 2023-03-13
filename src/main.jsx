@@ -4,7 +4,7 @@ import App from './App';
 // import { Auth0Provider } from "@auth0/auth0-react";
 import { Provider } from 'react-redux';
 import store from '../src/components/Test/redux/store';
-
+import { AuthProvider } from './components/login/context/AuthProvider';
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <Auth0Provider
   //   domain="dev-k82wlslt5xtdrcvd.us.auth0.com"
@@ -12,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   //   redirectUri={window.location.origin}
   // >
   <Provider store={store}>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </Provider>
   // </Auth0Provider>
 )

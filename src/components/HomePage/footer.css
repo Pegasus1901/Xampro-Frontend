@@ -1,0 +1,18 @@
+.foot {
+    position: relative;
+    background-color: black;
+    color: azure;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+.foot h1{
+    color: azure;
+}
+.foot .foot-ul{
+    display: inline-flex;
+}
+.foot .foot-ul li{
+    padding-left: 5px;
+    list-style: none;
+}

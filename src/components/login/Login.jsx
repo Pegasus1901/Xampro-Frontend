@@ -1,10 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import '../CSS/form.css';
+import AuthContext from './context/AuthProvider';
+import axios from './axios';
+
+const LOGIN_URL = '/auth'
+//change path with backend info
 
 const Login = () => {
     const { loginWithRedirect } = useAuth0();
 
+    const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
 
@@ -25,11 +31,37 @@ const Login = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
+        try {
+            const response = await axios.post(LOGIN_URL,
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            //console.log(JSON.stringify(response?.data));
+            //console.log(JSON.stringify(response));
 
-        console.log(user, pwd);
-        setUser('');
-        setPwd('');
-        setSuccess(true);
+            const AccessToken =response?.data?.accessToken;
+            const roles = response?.data?.roles;
+
+            setAuth({user,pwd,roles,accessToken});
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+
+        } catch (err) {
+            if(!err?.response){
+                setErrMsg('No Server Response')
+            }else if(err.response?.status === 400){
+                setErrMsg('Missing Username or Password');
+            }else if(err.response?.status === 401){
+                setErrMsg('Unauthorized Access')
+            }else{
+                setErrMsg('Login Failed')
+            }
+            errRef.current.focus();
+        }
     }
 
     return (
@@ -62,8 +94,8 @@ const Login = () => {
                                 <a href="#">Forgot Your Password?</a>
                             </p>
                         </form>
-                            {/* <button onClick={() => loginWithRedirect()}>Sign in</button> */}
-                            <button onClick={handleSubmit}>Sign in</button>
+                        {/* <button onClick={() => loginWithRedirect()}>Sign in</button> */}
+                        <button onClick={handleSubmit}>Sign in</button>
 
                         <div className="not-member">
                             Not a member? <a href="#">Register Now</a>

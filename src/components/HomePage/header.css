@@ -1,0 +1,33 @@
+.nav-ul {
+    text-align: right;
+    background-color: aliceblue;
+    height: 50px;
+    width: 100%;
+}
+.header .nav-ul{
+    display: flex;
+    justify-content: right;
+    min-width: 45px;
+}
+
+.header .nav-ul .logo img{
+    display: flex;
+    width: 80px;
+    margin-right: 1100px;
+}
+
+.nav-ul li {
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+}
+
+.nav-ul li a {
+    text-decoration: none;
+}
+.nav-ul li a:hover {
+    background-color: blue;
+    color: #333;
+    border-radius: 20%;
+}
+
