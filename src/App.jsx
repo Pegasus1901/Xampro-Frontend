@@ -11,49 +11,49 @@ import Header from './components/HomePage/Header.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/HomePage/Footer.jsx';
 import Home from './components/HomePage/Home.jsx';
-import Profile from './components/ProfilePage/Profile.jsx';
+// import Profile from './components/ProfilePage/Profile.jsx';
+import Navigation from './components/VoiceModule/Navigation.jsx';
+import WebcamModule from './components/WebcamModule/WebcamModule.jsx';
+
+
 
 
 const App = () => {
-  const [dataTable, setDataTable] = useState([])
+  // const [dataTable, setDataTable] = useState([])
   // console.log(dataTable);
-  useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/users')
-      .then(res => setDataTable(res.data))
-      .catch(err => console.log(err))
-  }, [])
+  // useEffect(() => {
+  //   axios('https://jsonplaceholder.typicode.com/users')
+  //     .then(res => setDataTable(res.data))
+  //     .catch(err => console.log(err))
+  // }, [])
 
-  const column = [
-    { heading: 'Name', value: 'name' },
-    { heading: 'Email', value: 'email' },
-    { heading: 'Phone', value: 'phone' },
-    { heading: 'City', value: 'address.city' },
-  ]
-  // const webRef = useRef(null);
+  // const column = [
+  //   { heading: 'Name', value: 'name' },
+  //   { heading: 'Email', value: 'email' },
+  //   { heading: 'Phone', value: 'phone' },
+  //   { heading: 'City', value: 'address.city' },
+  // ]
 
-  // const showImage = () => {
-  //   console.log(webRef.current.getScreenshot({ width: 1920, height: 1080 }));
-  // }
-  // { 
-  // <Webcam ref={webRef} />
-  // <button onClick={() => {
-  //   showImage();
-  // }}>Click For ScreenShot </button>
-  // <h1>hii</h1> }
+
   return (
     <>
-    {/* <BrowserRouter> */}
+
+      {/* <BrowserRouter> */}
       {/* <Container maxWidth="sm">
         <Box textAlign="center" mt={5}>
-          <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
-          <QuizManager />
+        <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
+        <QuizManager />
         </Box>
       </Container> */}
+      {/* </BrowserRouter> */}
+
       {/* <Table data={dataTable} column={column} /> */}
+
+      {/* <WebcamModule/> */}
       {/* <DDashboard/> */}
       {/* <Table/> */}
-      {/* </BrowserRouter> */}
-      <Profile/>
+      {/* <Profile/> */}
+      {/* <Navigation /> */}
     </>
   )
 }
