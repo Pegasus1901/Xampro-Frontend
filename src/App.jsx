@@ -7,29 +7,28 @@ import QuizManager from './components/Test/QuizManager.jsx';
 import Login from './components/login/Login.jsx';
 import DDashboard from './components/Dashboard/DDashboard.jsx';
 import Profile from './components/ProfilePage/Profile.jsx';
-import Nav from './components/VoiceModule/Nav.jsx';
 import WebcamModule from './components/WebcamModule/WebcamModule.jsx';
 import RenderTable from './components/Table/RenderTable.jsx';
+// import Nav from './components/VoiceModule/Nav.jsx';
+// import TestRegistration from './components/registration/TestRegistration.jsx';
 
 const App = () => {
 
   return (
     <>
-      {/* <BrowserRouter> */}
-      {/* <Container maxWidth="sm">
-        <Box textAlign="center" mt={5}>
-        <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
-        <QuizManager />
-        </Box>
-      </Container> */}
-      {/* </BrowserRouter> */}
+        {/* <Container maxWidth="sm">
+          <Box textAlign="center" mt={5}>
+            <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
+            <QuizManager />
+          </Box>
+        </Container> */}
 
       {/* <RenderTable/> */}
       {/* <WebcamModule/> */}
       {/* <DDashboard/> */}
-      {/* <Table/> */}
       {/* <Profile/> */}
       {/* <Nav /> */}
+      {/* <TestRegistration/> */}
     </>
   )
 }
