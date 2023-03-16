@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes, Link, redirect } from 'react-router-dom'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 
-const Navigation = () => {
+const Nav = () => {
 
   const commands =[
     {
@@ -69,4 +69,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Nav

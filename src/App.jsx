@@ -1,14 +1,13 @@
 import React from 'react'
 import axios from 'axios';
 import { useEffect, useState, useRef } from 'react'
-import QuizManager from './components/Test/QuizManager.jsx';
-// import { Box} from '@mui/system';
+import { BrowserRouter } from 'react-router-dom';
 import { Container, Box, Typography } from '@mui/material';
+import QuizManager from './components/Test/QuizManager.jsx';
 import Login from './components/login/Login.jsx';
 import DDashboard from './components/Dashboard/DDashboard.jsx';
-import { BrowserRouter } from 'react-router-dom';
 import Profile from './components/ProfilePage/Profile.jsx';
-import Navigation from './components/VoiceModule/Navigation.jsx';
+import Nav from './components/VoiceModule/Nav.jsx';
 import WebcamModule from './components/WebcamModule/WebcamModule.jsx';
 import RenderTable from './components/Table/RenderTable.jsx';
 
@@ -30,7 +29,7 @@ const App = () => {
       {/* <DDashboard/> */}
       {/* <Table/> */}
       {/* <Profile/> */}
-      {/* <Navigation /> */}
+      {/* <Nav /> */}
     </>
   )
 }
