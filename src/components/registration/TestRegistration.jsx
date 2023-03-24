@@ -15,27 +15,27 @@ const TestRegistration = () => {
                         <div className="fields">
                             <div className="input-field">
                                 <label>Full Name</label>
-                                <input type="text" placeholder="Enter your name" required />
+                                <input type="text" placeholder="Enter your name"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Date of Birth</label>
-                                <input type="date" placeholder="Enter birth date" required />
+                                <input type="date" placeholder="Enter birth date"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Email</label>
-                                <input type="text" placeholder="Enter your email" required />
+                                <input type="text" placeholder="Enter your email"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Mobile Number</label>
-                                <input type="number" placeholder="Enter mobile number" required />
+                                <input type="number" placeholder="Enter mobile number"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Gender</label>
-                                <select required>
+                                <select >
                                     <option disabled>Select gender</option>
                                     <option value="female">Female</option>
                                     <option value="male">Male</option>
@@ -45,7 +45,7 @@ const TestRegistration = () => {
 
                             <div className="input-field">
                                 <label>Occupation</label>
-                                <input type="text" placeholder="Enter your ccupation" required />
+                                <input type="text" placeholder="Enter your ccupation"  />
                             </div>
                         </div>
                     </div>
@@ -56,32 +56,32 @@ const TestRegistration = () => {
                         <div className="fields">
                             <div className="input-field">
                                 <label>ID Type</label>
-                                <input type="text" placeholder="Enter ID type" required />
+                                <input type="text" placeholder="Enter ID type"  />
                             </div>
 
                             <div className="input-field">
                                 <label>ID Number</label>
-                                <input type="number" placeholder="Enter ID number" required />
+                                <input type="number" placeholder="Enter ID number"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Issued Authority</label>
-                                <input type="text" placeholder="Enter issued authority" required />
+                                <input type="text" placeholder="Enter issued authority"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Issued State</label>
-                                <input type="text" placeholder="Enter issued state" required />
+                                <input type="text" placeholder="Enter issued state"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Issued Date</label>
-                                <input type="date" placeholder="Enter your issued date" required />
+                                <input type="date" placeholder="Enter your issued date"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Expiry Date</label>
-                                <input type="date" placeholder="Enter expiry date" required />
+                                <input type="date" placeholder="Enter expiry date"  />
                             </div>
                         </div>
 
@@ -99,32 +99,32 @@ const TestRegistration = () => {
                         <div className="fields">
                             <div className="input-field">
                                 <label>Address Type</label>
-                                <input type="text" placeholder="Permanent or Temporary" required />
+                                <input type="text" placeholder="Permanent or Temporary"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Nationality</label>
-                                <input type="text" placeholder="Enter nationality" required />
+                                <input type="text" placeholder="Enter nationality"  />
                             </div>
 
                             <div className="input-field">
                                 <label>State</label>
-                                <input type="text" placeholder="Enter your state" required />
+                                <input type="text" placeholder="Enter your state"  />
                             </div>
 
                             <div className="input-field">
                                 <label>District</label>
-                                <input type="text" placeholder="Enter your district" required />
+                                <input type="text" placeholder="Enter your district"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Block Number</label>
-                                <input type="number" placeholder="Enter block number" required />
+                                <input type="number" placeholder="Enter block number"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Ward Number</label>
-                                <input type="number" placeholder="Enter ward number" required />
+                                <input type="number" placeholder="Enter ward number"  />
                             </div>
                         </div>
                     </div>
@@ -135,32 +135,32 @@ const TestRegistration = () => {
                         <div className="fields">
                             <div className="input-field">
                                 <label>Father Name</label>
-                                <input type="text" placeholder="Enter father name" required />
+                                <input type="text" placeholder="Enter father name"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Mother Name</label>
-                                <input type="text" placeholder="Enter mother name" required />
+                                <input type="text" placeholder="Enter mother name"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Grandfather</label>
-                                <input type="text" placeholder="Enter grandfther name" required />
+                                <input type="text" placeholder="Enter grandfther name"   />
                             </div>
 
                             <div className="input-field">
                                 <label>Spouse Name</label>
-                                <input type="text" placeholder="Enter spouse name" required />
+                                <input type="text" placeholder="Enter spouse name"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Father in Law</label>
-                                <input type="text" placeholder="Father in law name" required />
+                                <input type="text" placeholder="Father in law name"  />
                             </div>
 
                             <div className="input-field">
                                 <label>Mother in Law</label>
-                                <input type="text" placeholder="Mother in law name" required />
+                                <input type="text" placeholder="Mother in law name"  />
                             </div>
                         </div>
 

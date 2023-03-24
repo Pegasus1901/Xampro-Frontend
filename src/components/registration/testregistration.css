@@ -19,8 +19,9 @@ body {
 
 .container {
     position: relative;
-    max-width: 9500px;
+    max-width: 950px;
     width: 900px;
+    /* height: 500px; */
     border-radius: 6px;
     padding: 30px;
     margin: 0 15px;
@@ -180,7 +181,7 @@ form .buttons button,
     margin-right: 14px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
     .container form {
         overflow-y: scroll;
     }
