@@ -1,10 +1,12 @@
 import React from 'react'
-import '../CSS/ddashboard00.css'
+import './ddashboard00.css'
 import Logo from '../../Images/logo.png'
+import Left from './Left'
 
 const DDashboard = () => {
     return (
         <div className="dashboard01">
+            <Left />
 
             <section className="dashboard">
                 <div className="dash-content">

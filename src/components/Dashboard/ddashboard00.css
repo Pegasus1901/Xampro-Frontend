@@ -27,10 +27,10 @@
     --tran-03: all 0.2s ease;
 }
 
-body {
+/* body {
     min-height: 100vh;
     background-color: var(--primary-color);
-}
+} */
 
 body.dark {
     --primary-color: #3A3B3C;
@@ -74,7 +74,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 300px;
     padding: 10px 14px;
     background-color: var(--panel-color);
     border-right: 1px solid var(--border-color);

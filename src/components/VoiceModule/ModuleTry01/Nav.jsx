@@ -93,10 +93,9 @@ const Nav = () => {
 
   const pages = ["home", "blog", "new blog post", "contact"];
   const urls = {
-    home: "/",
-    blog: "/blog",
-    "new blog post": "/neww",
-    contact: "/contact",
+    home: "/login",
+    blog: "/profile",
+    
   };
 
   let redirection = "";

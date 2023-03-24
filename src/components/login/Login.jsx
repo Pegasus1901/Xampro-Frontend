@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
-import '../CSS/form.css';
-import AuthContext from './context/AuthProvider';
+// import { useAuth0 } from "@auth0/auth0-react";   
+// import AuthContext from './context/AuthProvider';
+import './form.css';
 import axios from './axios';
+import { Link } from 'react-router-dom';
 
 const LOGIN_URL = '/auth'
 //change path with backend info
 
 const Login = () => {
-    const { loginWithRedirect } = useAuth0();
+    // const { loginWithRedirect } = useAuth0();
 
-    const { setAuth } = useContext(AuthContext);
+    // const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
 
@@ -42,27 +43,28 @@ const Login = () => {
             //console.log(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response));
 
-            const AccessToken =response?.data?.accessToken;
+            const AccessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
 
-            setAuth({user,pwd,roles,accessToken});
+            setAuth({ user, pwd, roles, accessToken });
             setUser('');
             setPwd('');
             setSuccess(true);
 
         } catch (err) {
-            if(!err?.response){
+            if (!err?.response) {
                 setErrMsg('No Server Response')
-            }else if(err.response?.status === 400){
+            } else if (err.response?.status === 400) {
                 setErrMsg('Missing Username or Password');
-            }else if(err.response?.status === 401){
+            } else if (err.response?.status === 401) {
                 setErrMsg('Unauthorized Access')
-            }else{
+            } else {
                 setErrMsg('Login Failed')
             }
             errRef.current.focus();
         }
     }
+
 
     return (
         <>
@@ -79,6 +81,7 @@ const Login = () => {
                         <form action="" onSubmit={handleSubmit}>
                             <input type="text"
                                 id='username'
+                                className='input'
                                 ref={userRef}
                                 autoComplete='off'
                                 onChange={(e) => setUser(e.target.value)}
@@ -86,6 +89,7 @@ const Login = () => {
                                 required placeholder="Enter username" />
                             <input type="password"
                                 id='password'
+                                    className='input'
                                 onChange={(e) => setPwd(e.target.value)}
                                 value={pwd}
                                 required
@@ -95,7 +99,12 @@ const Login = () => {
                             </p>
                         </form>
                         {/* <button onClick={() => loginWithRedirect()}>Sign in</button> */}
-                        <button onClick={handleSubmit}>Sign in</button>
+
+
+                        <Link to='/dashboard'><button
+                        className='signbutton'
+                            // onClick={handleSubmit}
+                        >Sign in</button></Link>
 
                         <div className="not-member">
                             Not a member? <a href="#">Register Now</a>

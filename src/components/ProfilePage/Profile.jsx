@@ -1,9 +1,11 @@
 import React from 'react'
+import Left from '../Dashboard/Left'
 import './profile.css'
 
 const Profile = () => {
   return (
     <>
+    <Left/>
           <div className="student-profile py-4">
               <div className="container">
                   <div className="row">

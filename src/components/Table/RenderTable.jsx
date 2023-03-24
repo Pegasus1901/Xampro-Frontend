@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import Left from '../Dashboard/Left';
 import Table from './Table';
 
 
@@ -18,9 +19,12 @@ const RenderTable = () => {
         { heading: 'Phone', value: 'phone' },
         { heading: 'City', value: 'address.city' },
     ]
-  return (
-      <Table data={dataTable} column={column} />
-  )
+    return (
+        <>
+            <Left />
+            <Table data={dataTable} column={column} />
+        </>
+    )
 }
 
 export default RenderTable
